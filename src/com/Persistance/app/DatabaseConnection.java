@@ -38,7 +38,7 @@ public class DatabaseConnection {
                 "acknowledged INTEGER);";
 
         try (Connection conn = connect();
-             Statement stmt = conn.createStatement()) {
+            Statement stmt = conn.createStatement()) {
             stmt.execute(sqlSensor);
             stmt.execute(sqlAlerts);
         } catch (SQLException e) {
